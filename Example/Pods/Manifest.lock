@@ -1,0 +1,16 @@
+PODS:
+  - PaginatedTableView (0.1.0)
+
+DEPENDENCIES:
+  - PaginatedTableView (from `../`)
+
+EXTERNAL SOURCES:
+  PaginatedTableView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PaginatedTableView: 278932d1054976dce9b7c842ce20b9480beb6c0e
+
+PODFILE CHECKSUM: 62a0c1d6bf8b782ebd47df65242b1feafd0ec7a2
+
+COCOAPODS: 1.6.1

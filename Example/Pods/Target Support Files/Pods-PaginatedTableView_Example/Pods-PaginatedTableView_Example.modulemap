@@ -1,0 +1,6 @@
+framework module Pods_PaginatedTableView_Example {
+  umbrella header "Pods-PaginatedTableView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "PaginatedTableView",
+  "version": "0.1.0",
+  "summary": "A short description of PaginatedTableView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Salmaan Ahmed/PaginatedTableView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Salmaan Ahmed": "salmaan.ahmed@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Salmaan Ahmed/PaginatedTableView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PaginatedTableView/Classes/**/*"
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PaginatedTableView_Example' do
+  pod 'PaginatedTableView', :path => '../'
+
+  target 'PaginatedTableView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

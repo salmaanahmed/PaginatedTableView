@@ -70,7 +70,7 @@ public class PaginatedTableView: UITableView {
     lazy var refreshControltableView: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl.addTarget(self, action: #selector(self.handleRefreshtableView(_:)), for: UIControlEvents.valueChanged)
+        refreshControl.addTarget(self, action: #selector(self.handleRefreshtableView(_:)), for: UIControl.Event.valueChanged)
         return refreshControl
     }()
     
@@ -80,7 +80,7 @@ public class PaginatedTableView: UITableView {
     public var customReloadDataBlock: (() -> Void)?
     
     //initWithFrame to init view from code
-    override init(frame: CGRect, style: UITableViewStyle) {
+    override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         setupView()
     }
@@ -267,7 +267,7 @@ class LoadMoreCell : UITableViewCell {
         return loader
     }()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         addSubview(activityIndicator)

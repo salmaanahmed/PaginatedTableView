@@ -13,7 +13,7 @@
 		388E626CC9133901172788EB55E1F147 /* Pods-PaginatedTableView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 240B1AA7502758F87B16D734D15197F2 /* Pods-PaginatedTableView_Tests-dummy.m */; };
 		4EE5AB215E95FE4B50250A8C4E20725F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		93461D64A51DF4495A9E1BEBD6445A97 /* Pods-PaginatedTableView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0147C5D4D361B70A76AED59BF1DEFD90 /* Pods-PaginatedTableView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF7C78974DCB814FABFBB9C8C489F1A0 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7344921D55902E27B6C2965C7E666CE /* ReplaceMe.swift */; };
+		AF7C78974DCB814FABFBB9C8C489F1A0 /* PaginatedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7344921D55902E27B6C2965C7E666CE /* PaginatedTableView.swift */; };
 		B6BAA0DA361515495E3F64CC1ADB7D4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		C4DC79B55AF0F20D00A76131DF8B65FB /* Pods-PaginatedTableView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AED9F31DE40EDAB1A1B1627282FAC1 /* Pods-PaginatedTableView_Example-dummy.m */; };
 		DAA953EB63821A0DC7FAC8873092EA8F /* PaginatedTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8CD2E52C75FFCF8DA969281306D49E /* PaginatedTableView-dummy.m */; };
@@ -38,12 +38,12 @@
 
 /* Begin PBXFileReference section */
 		0147C5D4D361B70A76AED59BF1DEFD90 /* Pods-PaginatedTableView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PaginatedTableView_Example-umbrella.h"; sourceTree = "<group>"; };
-		0F9C21E0096AEED238D0310D28E510C1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0F9C21E0096AEED238D0310D28E510C1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1A467E47DEDB873D440F50D4F473AF80 /* Pods-PaginatedTableView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaginatedTableView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		240B1AA7502758F87B16D734D15197F2 /* Pods-PaginatedTableView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PaginatedTableView_Tests-dummy.m"; sourceTree = "<group>"; };
 		2DCE5007A1B9078F391B185E0B47268E /* Pods-PaginatedTableView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PaginatedTableView_Tests-Info.plist"; sourceTree = "<group>"; };
 		31AED9F31DE40EDAB1A1B1627282FAC1 /* Pods-PaginatedTableView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PaginatedTableView_Example-dummy.m"; sourceTree = "<group>"; };
-		377A3A5F6B4883D9197FAC65ADEBCF85 /* PaginatedTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PaginatedTableView.framework; path = PaginatedTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		377A3A5F6B4883D9197FAC65ADEBCF85 /* PaginatedTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PaginatedTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B294A28B595FEB8332BF41ABE793DAC /* Pods-PaginatedTableView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PaginatedTableView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		48956F6B5AF50553B5C3A8097B0E1EB9 /* Pods-PaginatedTableView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaginatedTableView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C8CD2E52C75FFCF8DA969281306D49E /* PaginatedTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PaginatedTableView-dummy.m"; sourceTree = "<group>"; };
@@ -52,20 +52,20 @@
 		5A401F64799450D67318486205A94F2E /* Pods-PaginatedTableView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PaginatedTableView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6155B0504AE2695AD2AA4F8340F84D6D /* PaginatedTableView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PaginatedTableView-Info.plist"; sourceTree = "<group>"; };
 		71D60C2CC20B65DE2C00493EAE75B4DF /* Pods-PaginatedTableView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PaginatedTableView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		72DFFDA3E0CD7FCC03797422840D4138 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		72DFFDA3E0CD7FCC03797422840D4138 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7FE10ABD18FE5C824FB3F76856D67C8C /* Pods-PaginatedTableView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PaginatedTableView_Example-Info.plist"; sourceTree = "<group>"; };
 		83106C93B79954FD8816E65669A08E4F /* Pods-PaginatedTableView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PaginatedTableView_Example.modulemap"; sourceTree = "<group>"; };
 		869D690A65FD95C85469E430832F4EFE /* PaginatedTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PaginatedTableView.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A7715689F96BF0582997FAB2A35DF660 /* Pods-PaginatedTableView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PaginatedTableView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B6FD211F2F194ABEE704874FC88225C9 /* PaginatedTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PaginatedTableView.modulemap; sourceTree = "<group>"; };
 		BDC8359184C9D5CFDCC7F7D9BCA560CA /* Pods-PaginatedTableView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PaginatedTableView_Tests.modulemap"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D307A22923E81EEA1F31F58A5F292FD4 /* Pods_PaginatedTableView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PaginatedTableView_Tests.framework; path = "Pods-PaginatedTableView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBB93773D0C9D1252F25E1FF53E23A23 /* Pods_PaginatedTableView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PaginatedTableView_Example.framework; path = "Pods-PaginatedTableView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D307A22923E81EEA1F31F58A5F292FD4 /* Pods_PaginatedTableView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaginatedTableView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB93773D0C9D1252F25E1FF53E23A23 /* Pods_PaginatedTableView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaginatedTableView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E175C18CF7873224252907254A3160B8 /* Pods-PaginatedTableView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PaginatedTableView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E381D70DDCBD6F5A17AAD07CBE97A323 /* PaginatedTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PaginatedTableView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F7344921D55902E27B6C2965C7E666CE /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = PaginatedTableView/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		E381D70DDCBD6F5A17AAD07CBE97A323 /* PaginatedTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PaginatedTableView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F7344921D55902E27B6C2965C7E666CE /* PaginatedTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaginatedTableView.swift; path = PaginatedTableView/Classes/PaginatedTableView.swift; sourceTree = "<group>"; };
 		F735D9C90016E63A3649A1C34DDF0722 /* Pods-PaginatedTableView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PaginatedTableView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F86E6C3A9E11BC7920A0C1BA417EC04C /* PaginatedTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PaginatedTableView-umbrella.h"; sourceTree = "<group>"; };
 		FF024434B69A73A152F834DF53BDE3FD /* PaginatedTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PaginatedTableView-prefix.pch"; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		B08B52D6DE3C6BB77B3317B7B59C966B /* PaginatedTableView */ = {
 			isa = PBXGroup;
 			children = (
-				F7344921D55902E27B6C2965C7E666CE /* ReplaceMe.swift */,
+				F7344921D55902E27B6C2965C7E666CE /* PaginatedTableView.swift */,
 				B5319A3A286B576360CBAAFB01408DFE /* Pod */,
 				4D85CD5CF9A586C95679977552250081 /* Support Files */,
 			);
@@ -321,6 +321,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -365,7 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA953EB63821A0DC7FAC8873092EA8F /* PaginatedTableView-dummy.m in Sources */,
-				AF7C78974DCB814FABFBB9C8C489F1A0 /* ReplaceMe.swift in Sources */,
+				AF7C78974DCB814FABFBB9C8C489F1A0 /* PaginatedTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +618,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/PaginatedTableView/PaginatedTableView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/PaginatedTableView/PaginatedTableView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PaginatedTableView/PaginatedTableView.modulemap";
 				PRODUCT_MODULE_NAME = PaginatedTableView;
@@ -649,7 +650,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/PaginatedTableView/PaginatedTableView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/PaginatedTableView/PaginatedTableView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PaginatedTableView/PaginatedTableView.modulemap";
 				PRODUCT_MODULE_NAME = PaginatedTableView;
@@ -717,8 +718,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

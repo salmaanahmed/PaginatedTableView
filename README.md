@@ -16,10 +16,53 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 <br>
 
 Pagination or Infinite scroll is a very necessary feature in modern apps. This library makes it super easy to implement infinite scroll.  
-All you have to do is, assign `PaginatedTableView` class to your tableView and implement `paginatedDelegate` as well as `paginatedDataSource`.  
-You will get a callback with page number, page size, from where you shall call api.  
-No need to keep the page number or show/hide loader logic within the ViewController, it will stay as clean as you have simple table view.  
+No need to keep the page number or show/hide loader logic within the ViewController, it will stay as clean as you have simple table view. :+1:  
 Guess what, it comes with pull to refresh by default ;)
+
+## Usage
+
+**Step 1:** Assign custom class
+```swift
+  // Assign custom class to table view in storyboard
+  @IBOutlet weak var tableView: PaginatedTableView!
+``` 
+  
+**Step 2:** Remember to assign paginated delegate and data source ONLY, DO NOT assign `tableViewDelegate` or `tableViewDataSource`
+```swift
+  // Add paginated delegates only
+  tableView.paginatedDelegate = self
+  tableView.paginatedDataSource = self
+```
+  
+**Step 3:** On `ViewDidLoad` call the load method with refresh true optional parameter
+```swift
+  tableView.loadData(refresh: true)
+```
+  
+**Step 4:** Implement stub and call api
+```swift
+    func loadMore(_ pageNumber: Int, _ pageSize: Int, onSuccess: ((Bool) -> Void)?, onError: ((Error) -> Void)?) {
+        // Call your api here
+        // Send true in onSuccess in case new data exists, sending false will disable pagination
+        
+        // If page number is first, reset the list
+        if pageNumber == 1 { self.list = [Model]() }
+        
+        // else append the data to list
+        self.list.append(apiResponseList)
+        
+        // If Api responds with error
+        onError?(apiError)        
+
+        // Else end success with flag true if more data available
+        let moreDataAvailable = !apiResponseList.isEmpty
+        onSuccess?(moreDataAvailable)
+    }
+```
+
+**Step 5: Enjoy**  
+Yeah! Thats all. You now have paginated table view with infinite scroll along with pull to refresh :heart:   
+Simple, isnt it? 
 
 ## Installation
 

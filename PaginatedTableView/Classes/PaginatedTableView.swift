@@ -157,7 +157,6 @@ extension PaginatedTableView {
         if distanceFromBottom < height {
             load()
         }
-        print("Scroll: \(distanceFromBottom)")
     }
 }
 
@@ -293,9 +292,6 @@ extension UIView {
             let insets = self.safeAreaInsets
             topInset = insets.top
             bottomInset = insets.bottom
-            
-            print("Top: \(topInset)")
-            print("bottom: \(bottomInset)")
         }
         
         translatesAutoresizingMaskIntoConstraints = false

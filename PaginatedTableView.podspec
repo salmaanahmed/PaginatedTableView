@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PaginatedTableView'
-  s.version          = '0.1.0'
+  s.version          = '1.0'
   s.summary          = 'Assign this class to your UITableView and it will be equipped with pull to refresh as well as infinite scroll'
 
 # This description is used to generate tags and improve search results.

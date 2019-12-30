@@ -59,6 +59,7 @@ Guess what, it comes with pull to refresh by default ;)
         onSuccess?(moreDataAvailable)
     }
 ```
+The latest release supports swiping cells and listening to scroll changes, please see example for more features.
 
 **Step 5: Enjoy**  
 Yeah! Thats all. You now have paginated table view with infinite scroll along with pull to refresh :heart:   

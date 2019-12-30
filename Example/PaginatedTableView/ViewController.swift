@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         
         // More settings
         tableView.enablePullToRefresh = true
+        tableView.pullToRefreshTitle = NSAttributedString(string: "Pull to Refresh")
         
         tableView.loadData(refresh: true)
     }
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
 }
 
 //
-// MARK Paginated Delegate - Where magic happens
+// MARK: Paginated Delegate - Where magic happens
 //
 extension ViewController: PaginatedTableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -80,5 +81,28 @@ extension ViewController: PaginatedTableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+    }
+}
+
+//
+// MARK: Enable swipe in paginatedTableView
+//
+extension ViewController {
+    // For Swipe Actions
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+    }
+    
+    // To enable swipe, make sure you overide this method
+    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if self.list[indexPath.row] % 3 == 0 {
+            return .delete
+        } else {
+            return .none
+        }
     }
 }

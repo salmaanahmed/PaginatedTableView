@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 
-public protocol PaginatedTableViewDataSource: class {
+@objc public protocol PaginatedTableViewDataSource: class {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     func numberOfSections(in tableView: UITableView) -> Int
+    @objc optional func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle
+    @objc optional func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
 }
 
 @objc public protocol PaginatedTableViewDelegate: class {
@@ -24,6 +26,7 @@ public protocol PaginatedTableViewDataSource: class {
     func loadMore(_ pageNumber: Int, _ pageSize: Int, onSuccess: ((Bool) -> Void)?, onError: ((Error) -> Void)?)
     @objc optional func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     @objc optional func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    @objc optional func scrollViewDidScroll(_ scrollView: UIScrollView)
 }
 
 //
@@ -51,6 +54,12 @@ public class PaginatedTableView: UITableView {
     public var heightForHeaderInSection: CGFloat = 0
     public var titleForHeaderInSection = ""
     
+    public var pullToRefreshTitle: NSAttributedString? = nil {
+        didSet {
+            refreshControltableView.attributedTitle = pullToRefreshTitle
+        }
+    }
+    
     public var enablePullToRefresh = false {
         willSet {
             if newValue == enablePullToRefresh { return }
@@ -69,7 +78,7 @@ public class PaginatedTableView: UITableView {
     // refresh control
     lazy var refreshControltableView: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.attributedTitle = pullToRefreshTitle
         refreshControl.addTarget(self, action: #selector(self.handleRefreshtableView(_:)), for: UIControl.Event.valueChanged)
         return refreshControl
     }()
@@ -157,6 +166,8 @@ extension PaginatedTableView {
         if distanceFromBottom < height {
             load()
         }
+        
+        paginatedDelegate?.scrollViewDidScroll?(scrollView)
     }
 }
 
@@ -244,6 +255,14 @@ extension PaginatedTableView: UITableViewDataSource, UITableViewDelegate {
             return 0.0
         }
         return paginatedDelegate?.tableView(tableView, heightForRowAt: indexPath) ?? 0
+    }
+    
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        paginatedDataSource?.tableView?(tableView, commit: editingStyle, forRowAt: indexPath)
+    }
+    
+    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return paginatedDataSource?.tableView?(tableView, editingStyleForRowAt: indexPath) ?? .none
     }
 }
 
